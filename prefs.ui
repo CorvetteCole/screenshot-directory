@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="my-gettext-domain">
+    <template class="PrefsWidget" parent="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="box">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="hexpand">0</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Screenshot Directory:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="file_chooser_button">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Select a directory</property>
+                <signal name="clicked" handler="_onChooseFileClicked" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+    </template>
+    <object class="GtkFileChooserNative" id="file_chooser">
+        <property name="title" translatable="yes">Select New Screenshot Directory</property>
+        <property name="select-multiple">0</property>
+        <property name="action">select-folder</property>
+        <property name="modal">1</property>
+        <signal name="response" handler="_onFileChooserResponse" swapped="no"/>
+    </object>
+</interface>

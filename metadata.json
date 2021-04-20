@@ -1,0 +1,10 @@
+{
+  "name": "Screenshot Directory",
+  "description": "The default screenshot directory is ~/Pictures. This extension changes that to use whatever is set if you used the Gnome Screenshot app. This can be found in the dconf setting: /org/gnome/gnome-screenshot/auto-save-directory. If that directory doesn't exist, the extension will use the Home directory instead.\n\nNote: If the dconf setting doesn't exist, you need  to install the Gnome Screenshot app.\n\nThe idea was taken from the extension: Screenshot Locations.",
+  "shell-version": [
+    "40"
+  ],
+  "url": "https://github.com/CorvetteCole/screenshot-directory",
+  "uuid": "screenshot-directory@corvettecole.com",
+  "version": 6
+}
